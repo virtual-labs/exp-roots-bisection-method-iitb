@@ -222,7 +222,7 @@ function verify_answer() {
     let root_inp = (document.getElementById('root-val-inp'));
     let func_inp = (document.getElementById('func-val-inp'));
     console.log(func_val_8, root_val_8);
-    if (!verify_values(parseFloat(func_inp.value), parseFloat(func_val_8.toFixed(5)))) {
+    if (!verify_values(parseFloat(parseFloat(func_inp.value).toFixed(5)), parseFloat(func_val_8.toFixed(5)))) {
         func_inp.style.border = '1px solid red';
         alert('Incorrect function value for 8th iteration');
         return;
